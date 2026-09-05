@@ -1,0 +1,18 @@
+export function adicionarTarefa(
+  tarefa,
+  tarefas,
+  setTarefas,
+  setTarefa
+) {
+  if (tarefa.trim() === '') {
+    return;
+  }
+
+  const novaTarefa = {
+    id: Date.now().toString(),
+    nome: tarefa,
+  };
+
+  setTarefas([...tarefas, novaTarefa]);
+  setTarefa('');
+}
